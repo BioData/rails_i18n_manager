@@ -212,7 +212,7 @@ module RailsI18nManager
         ### ONLY FOR HTML - SO THAT WE DONT DOWNLOAD INCOMPLETE TRANSLATION EXPORT PACKAGES
 
         if params[:search].present?
-          @translation_keys = @translation_keys.search(params[:search])
+          @translation_keys = @translation_keys.translation_search(params[:search])
         end
 
         if params[:status] == "Inactive"

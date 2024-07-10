@@ -9,7 +9,7 @@ module RailsI18nManager
         rel = self
 
         full_str.split(' ').each do |q|
-          rel = rel.search(q)
+          rel = rel.translation_search(q)
         end
 
         next rel
