@@ -12,7 +12,7 @@ module RailsI18nManager
     validates :default_locale, presence: true
     validate :validate_additional_locales
 
-    scope :search, ->(str){
+    scope :translation_search, ->(str){
       fields = [
         "#{table_name}.name",
       ]
